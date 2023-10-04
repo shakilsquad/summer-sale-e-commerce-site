@@ -1,30 +1,16 @@
-// main function
-function setInnerTExt(id, text){
-      document.getElementById(id).innerText=text;
-}
-const  total = 0;
+const inputType = document.getElementById('input-type');
+const applyButton = document.getElementById('apply-button');
 
-
-function setInnerPrice(id,number){
-     document.getElementById(id).innerText=number;
-     total = parseInt(prices) + parseInt('first-price');
-     document.getElementById('first-price').innerText = prices;
-}
-
-/**
- let total = 0;
-function handleClickeDIv(target){
-     const selectItemContainer = document.getElementById('select-item');
-
-     const itemName = target.parentNode.childNodes[3].childNodes[3].childNodes[3].innerText;
-     const li =document.createElement('li');
-     li.innerText = itemName;
-     selectItemContainer.appendChild(li);
-
-     const price = target.parentNode.childNodes[3].childNodes[3].childNodes[5].innerText.split(' ')[0];
-     total = parseInt(total) + parseInt(price);
+inputType.addEventListener('keyup', (SELL200) =>{
+     const value = SELL200.currentTarget.value;
+     if( value == " "){
+          applyButton.disabled = true;
+        
+     }
+     else{
+          applyButton.disabled = false;
+          // applyButton.classList.remove('on')
+     }
     
-     document.getElementById('price').innerText=total;
-     
-}
- */
+})
+
